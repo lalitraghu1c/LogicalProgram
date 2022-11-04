@@ -8,7 +8,7 @@ namespace LogicalProblem
         public void Start()
         {
             int startHr = dateTime.Hour;
-            int StartMin = dateTime.Minute;
+            int startMin = dateTime.Minute;
             int startSec = dateTime.Second;
             int startMilliSec = dateTime.Millisecond;
             Console.WriteLine("Press s to Start");
@@ -20,14 +20,13 @@ namespace LogicalProblem
                 string stop = Console.ReadLine().ToLower();
                 if (stop.Equals("x"))
                 {
-                    DateTime dateTime1 = DateTime.Now;
-                    Console.WriteLine(dateTime1.Millisecond);
-                    int stopHr = dateTime1.Hour;
-                    int stopMin = dateTime1.Minute;
-                    int stopSec = dateTime1.Second;
-                    int stopMilliSec = dateTime1.Millisecond;
-                    Console.WriteLine("Stopwatch details:- Hours:" + (stopHr - startHr) + "Minutes:" + (stopMin - StartMin)
-                        + "Seconds:" + (stopSec - startSec) + "Milliseconds:" + (stopMilliSec - startMilliSec));
+                    DateTime timeSpan1 = DateTime.Now;
+                    int endHr = timeSpan1.Hour;
+                    int endMin = timeSpan1.Minute;
+                    int endSec = timeSpan1.Second;
+                    int endMilllisec = timeSpan1.Millisecond;
+                    Console.WriteLine("Hours is : " + (endHr - startHr) + "\t Minutes is :  " + (endMin - startMin) + " \t Second is : " + (endSec - startSec)
+                            + " \t MilliSeconds : " + (endMilllisec - startMilliSec));
                 }
             }
         }
