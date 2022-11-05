@@ -1,5 +1,4 @@
-﻿using Learning;
-using System;
+﻿
 namespace LogicalProblem
 
 {
