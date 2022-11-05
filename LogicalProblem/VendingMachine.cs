@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Versioning;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,7 +16,7 @@ namespace LogicalProblem
         {
             for (int i = 0; i < note.Length; i++)
             {
-                if (amount / note[i] >=1)
+                if (amount / note[i] >= 1)
                 {
                     arr[count] = note[i];
                     count++;
@@ -31,10 +32,14 @@ namespace LogicalProblem
                 else
                     continue;
             }
-            Console.WriteLine("Count :--- " + count);
+            if (count > 0)
+            {
+                Console.WriteLine("Count :--- " + count);
+            }
         }
         public void Print()
         {
+            int prev = 0;
             for (int i = 0; i < arr.Length; i++)
             {
                 int count = 0;
@@ -42,12 +47,16 @@ namespace LogicalProblem
                 {
                     foreach (var data in arr)
                     {
-                        if (arr[i] == data)
+                        if (arr[i] == data && data != prev)
                         {
                             count++;
                         }
                     }
-                    Console.WriteLine(count + " : " + arr[i]);
+                    prev = arr[i];
+                    if (count > 0)
+                    {
+                        Console.WriteLine(count + " : " + arr[i]);
+                    }
                 }
             }
         }

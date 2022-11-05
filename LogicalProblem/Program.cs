@@ -49,7 +49,7 @@ namespace LogicalProblem
                         break;
                     case 9:
                         VendingMachine vending = new VendingMachine();
-                        vending.Note(1250);
+                        vending.Note(2250);
                         vending.Print();
                         break;
                     default:
