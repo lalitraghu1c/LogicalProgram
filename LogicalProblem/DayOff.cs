@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 namespace Learning
 {
-    public class DayOff
+    public class Day_Week
     {
         public void Dati()
         {
